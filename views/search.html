@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../assets/styles/global.css" />
+    <link
+      rel="shortcut icon"
+      href="./../assets/images/app_logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"
+      integrity="sha512-oJCa6FS2+zO3EitUSj+xeiEN9UTr+AjqlBZO58OPadb2RfqwxHpjTU8ckIC8F4nKvom7iru2s8Jwdo+Z8zm0Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./../assets/scripts/input-mask.js"></script>
+    <script src="./../assets/scripts/user-data.js"></script>
+    <script src="./../assets/scripts/search.js"></script>
+    <title>CONSULTA BRASIL</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="logo-sm"
+          src="./../assets/images/app_logo.png"
+          alt="Consulta Brasil"
+        />
+      </header>
+      <section>
+        <div class="vsl">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/lKid5kO9P6g?controls=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media;"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="query">
+        <div class="loading text-center" id="query">
+          <img src="./../assets/images/loading.gif" width="42" />
+          <p>Por favor, aguarde enquanto consultamos no banco de dados.</p>
+        </div>
+        <div class="rescue text-center d-none" id="rescue">
+          <a
+            onclick="window.location='./../views/withdraw.html'+window.location.search;"
+          >
+            <button class="btn bg-green btn-rescue" type="button">
+              VOCÊ TEM DINHEIRO PARA SACAR, CLIQUE AQUI!
+            </button>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="comments">
+          <div class="fb-comments" style="margin-top: 5px">
+            <div class="fb-comments-header text-center">
+              <span class="strong">Mostrando 15 de 163 comentários</span>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        src="./../assets/images/fb-depoiments/p1.webp"
+                        id="1"
+                        width="48"
+                        height="48"
+                        alt="imagem 1"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-1">Luciana Tchuca </name>
+                      </font>
+                      <br />
+                      <span id="c-1"
+                        >esse dinheiro é nosso por direito! Governo
+                        Ladrão!!!</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 59</likes>
+                      <date>3 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="2"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p2.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-2">Vanessa Martinelle </name>
+                      </font>
+                      <br />
+                      <span id="c-2"
+                        >Assisti a reportagem essa semana e consegui fazer meu
+                        saque, tinha 900,00 reais disponivel já falei para meus
+                        2 filhos fazerem a pesquisa também obrigado consulta
+                        brasil</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 63</likes>
+                      <date>7 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="3"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p3.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-3">Willian Costa </name><br />
+                      </font>
+                      <span id="c-3"
+                        >Realizei minha consulta e consegui pegar 2100 reais
+                        gloria a Deus</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 11</likes>
+                      <date>15 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="4"
+                        width="48"
+                        height="48"
+                        alt="imagem perfil"
+                        src="./../assets/images/fb-depoiments/p4.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-4">Marília Eduarda </name>
+                      </font>
+                      <br />
+                      <span id="c-4"
+                        >Sempre dou meu cpf e pego todas as notas fiscais por
+                        saber disso a anos!!!</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 62</likes>
+                      <date>37 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="5"
+                        width="48"
+                        height="48"
+                        alt="imagem perfil"
+                        src="./../assets/images/fb-depoiments/p5.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-5">Carol Bottini </name>
+                      </font>
+                      <br />
+                      <span id="c-5"
+                        >alguém pode me ajudar não estou conseguindo</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 88</likes>
+                      <date>55 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-reply-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="6"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p6.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-6">Julia Oliveira </name>
+                      </font>
+                      <br />
+                      <span id="c-6"
+                        >você só precisa apertar o botão de realizar consulta e
+                        dar seu nome e cpf</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 7</likes>
+                      <date>44 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-reply-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="7"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p5.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-7">Carol Bottini </name>
+                      </font>
+                      <br />
+                      <span id="c-7"
+                        >Obrigada vou pedir meu filho para fazer o meu e o
+                        dele</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 93</likes>
+                      <date>3 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="8"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p8.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-8">Erica Almeida </name>
+                      </font>
+                      <br />
+                      <span id="c-8"
+                        >Realizei a consulta e peguei 100 reais não foi muito
+                        mas já ajudou a pagar a luz esse mês</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 129</likes>
+                      <date>agora</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-reply-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        loading="lazy"
+                        id="9"
+                        width="48"
+                        height="48"
+                        alt="imagem de perfil"
+                        src="./../assets/images/fb-depoiments/p9.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-9">Bruno Tanaka </name>
+                      </font>
+                      <br />
+                      <span id="c-9"
+                        >É por causa da sua idade, você é muito novo e
+                        provavelmente não tinha muito pra sacar por causa disso,
+                        eu e minha esposa temos 65 anos e 71 e conseguimos sacar
+                        35 mil juntos por conta de todos os anos que acabou
+                        acumulando</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 44</likes>
+                      <date>1 h</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img">
+                      <img
+                        id="13"
+                        loading="lazy"
+                        width="75"
+                        height="75"
+                        src="./../assets/images/fb-depoiments/p13.webp"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">
+                      <font class="fb-comments-comment-name">
+                        <name id="nome-13">Filipe Viana </name>
+                      </font>
+                      <br />
+                      <span id="c-13"
+                        >Que todos consigam pegar o que é seu por direito, já
+                        vivemos em um país cheio de impostos e retenções!</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like> · <reply>Responder</reply> ·
+                      <likes> 82</likes>
+                      <date>2 h</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <div class="fb-comments-wrapper" id="24">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img">
+                        <img
+                          id="14"
+                          loading="lazy"
+                          width="75"
+                          height="75"
+                          src="./../assets/images/fb-depoiments/p14.webp"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        <font class="fb-comments-comment-name">
+                          <name id="nome-14">Pamm Kaisser </name>
+                        </font>
+                        <br />
+                        <span id="c-14"
+                          >Alguém fez e conseguiu? É legal? não é nada errado
+                          não?</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like> · <reply>Responder</reply> ·
+                        <likes>210</likes>
+                        <date>3 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-reply-wrapper">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img">
+                        <img
+                          id="15"
+                          loading="lazy"
+                          width="75"
+                          height="75"
+                          src="./../assets/images/fb-depoiments/p15.webp"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        <font class="fb-comments-comment-name">
+                          <name id="nome-15">Kelly Marçal </name>
+                        </font>
+                        <br />
+                        <span id="c-15"
+                          >Siiim, eu sou advogada e eu posso comprovar que é um
+                          direito de todo brasileiro.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like> · <reply>Responder</reply> ·
+                        <likes>12</likes>
+                        <date>3 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-reply-wrapper">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img">
+                        <img
+                          id="16"
+                          loading="lazy"
+                          width="75"
+                          height="75"
+                          src="./../assets/images/fb-depoiments/p14.webp"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        <font class="fb-comments-comment-name">
+                          <name id="nome-16">Pamm Kaisser </name>
+                        </font>
+                        <br />
+                        <span id="c-16"
+                          >Nossa, obrigada, esse dinheiro vai ajudar muito aqui
+                          em casa</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like> · <reply>Responder</reply> ·
+                        <likes>109</likes>
+                        <date>2 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img">
+                        <img
+                          id="17"
+                          loading="lazy"
+                          width="75"
+                          height="75"
+                          src="./../assets/images/fb-depoiments/p7.webp"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        <font class="fb-comments-comment-name">
+                          <name id="nome-17">Maria Marçal </name>
+                        </font>
+                        <br />
+                        <span id="c-17"
+                          >esse é bom, mostra tudo e faz na hora o pix pra
+                          gente!</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like> · <reply>Responder</reply> ·
+                        <likes>7</likes>
+                        <date>33 min</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img">
+                        <img
+                          id="18"
+                          loading="lazy"
+                          width="75"
+                          height="75"
+                          src="./../assets/images/fb-depoiments/p18.webp"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">
+                        <font class="fb-comments-comment-name">
+                          <name id="nome-18">Kayka Janiszewski </name>
+                        </font>
+                        <br />
+                        <span id="c-18"
+                          >saquei e o churrasco já vai rolar esse final de
+                          semana obrigada BRAAAASILLLLL</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like> · <reply>Responder</reply> ·
+                        <likes>48</likes>
+                        <date>4 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4 class="btn-link text-center">
+                Este conteúdo não recebe mais comentários.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

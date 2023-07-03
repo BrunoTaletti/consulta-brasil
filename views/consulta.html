@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../assets/styles/global.css" />
+    <link
+      rel="shortcut icon"
+      href="./../assets/images/app_logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js"
+      integrity="sha512-oJCa6FS2+zO3EitUSj+xeiEN9UTr+AjqlBZO58OPadb2RfqwxHpjTU8ckIC8F4nKvom7iru2s8Jwdo+Z8zm0Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./../assets/scripts/input-mask.js"></script>
+    <script src="./../assets/scripts/data-storage.js"></script>
+    <title>CONSULTA BRASIL</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="logo"
+          src="./../assets/images/app_logo.png"
+          alt="Consulta Brasil"
+        />
+      </header>
+      <section class="text-center">
+        <h1>VEJA COMO REALIZAR A CONSULTA:</h1>
+        <div class="box text-center">
+          <h1 class="title">1° PASSO</h1>
+          <p class="content">
+            Insira seus dados para realizar a consulta gratuita e saber a
+            quantia exata que você tem disponível para saque.
+          </p>
+        </div>
+        <div class="box text-center">
+          <h1 class="title">2° PASSO</h1>
+          <p class="content">
+            Aguarde a consulta ser realizada. O tempo de espera pode demorar
+            entre 1 à 3 minutos.
+          </p>
+        </div>
+        <div class="box text-center">
+          <h1 class="title">3° PASSO</h1>
+          <p class="content">
+            Basta realizar o saque do valor disponível para você.
+          </p>
+        </div>
+      </section>
+      <section class="data">
+        <form class="form-user" id="user-data">
+          <div class="form-item">
+            <label>Insira seu CPF <span class="required">*</span></label>
+            <input
+              type="text"
+              id="cpf"
+              maxlength="14"
+              placeholder="Ex: 000.000.000-00"
+              required
+            />
+          </div>
+          <div class="form-item">
+            <label>Data de Nascimento <span class="required">*</span></label>
+            <input
+              type="text"
+              id="birth"
+              maxlength="10"
+              placeholder="Ex: 00/00/0000"
+              required
+            />
+          </div>
+          <button type="submit" class="btn bg-orange">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Consultar Agora
+          </button>
+        </form>
+      </section>
+      <footer>
+        <img src="./../assets/images/gov_logo.png" alt="https://gov.br/" />
+        <div class="links center">
+          <p>
+            <a
+              href="./../views/terms-of-use.html"
+              class="btn-link"
+              target="_blank"
+              >Termos de Uso</a
+            >
+            <span class="btn-link"> | </span>
+            <a
+              href="./../views/privacy-policy.html"
+              class="btn-link"
+              target="_blank"
+              >Politica de Privacidade</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
